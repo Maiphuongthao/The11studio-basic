@@ -41,12 +41,12 @@ export default {
           13: "#6C7275",
         },
       },
-      
+
       fontFamily: {
-        sans: ["var(--font-sora)", ...fontFamily.sans],
-        code: "var(--font-code)",
-        grotesk: "var(--font-grotesk)",
+        sans: ["var(--lexend)", ...fontFamily.sans],
+        lexend: "var(--font-lexend)",
       },
+
       letterSpacing: {
         tagline: ".15em",
       },
@@ -92,7 +92,7 @@ export default {
       addBase({});
       addComponents({
         ".container": {
-          "@apply max-w-[77.5rem] mx-auto px-5 md:px-10 lg:px-15 xl:max-w-[87.5rem]":
+          "@apply min-w-[77.5rem] mx-auto px-5 md:px-10 lg:px-15 xl:max-w-[87.5rem]":
             {},
         },
         ".h1": {
@@ -130,10 +130,10 @@ export default {
             {},
         },
         ".quote": {
-          "@apply font-code text-lg leading-normal": {},
+          "@apply font-lexend text-lg leading-normal": {},
         },
         ".button": {
-          "@apply font-code text-xs font-bold uppercase tracking-wider": {},
+          "@apply font-lexend text-xs font-bold uppercase tracking-wider": {},
         },
       });
       addUtilities({

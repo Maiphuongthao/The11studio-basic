@@ -63,7 +63,7 @@ const Header = () => {
       <div
         className={`flex w-full justify-between px-5 md:px-8 max-lg:pt-7 max-lg:pb-4 `}
       >
-        <a className="items-center flex flex-initial w-[12rem]" href="#">
+        <a className="items-center flex flex-none w-[12rem]" href="#">
           <img src={blacklogo} alt="secondary logo" />
         </a>
         <nav
@@ -74,9 +74,9 @@ const Header = () => {
           {navigation.map((item) => (
             <div
               key={item.id}
-              className={`flex font-code text-xl uppercase transition-colors ${
+              className={`flex font-lexend text-xl font-semibold uppercase transition-colors ${
                 item.submenu ? " flex-col " : ""
-              } px-6 py-6 md:text-sm md:font-semibold`}
+              } px-5 py-5 md:text-sm`}
             >
               <div className={`flex gap-2 hover-btn`}>
                 <a className="" href={item.url}>
@@ -94,7 +94,7 @@ const Header = () => {
               <div
                 className={`${
                   openServices ? "md:fixed md:top-[4.5rem]" : "hidden"
-                } flex flex-col uppercase my-3 font-medium text-lg md:text-xs 
+                } flex flex-col uppercase my-3 font-light text-lg md:text-xs 
                      `}
               >
                 {services.map((service) => (
