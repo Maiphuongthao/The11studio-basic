@@ -41,6 +41,7 @@ export default {
           13: "#6C7275",
         },
       },
+      
       fontFamily: {
         sans: ["var(--font-sora)", ...fontFamily.sans],
         code: "var(--font-code)",

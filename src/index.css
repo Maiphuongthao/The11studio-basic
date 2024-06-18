@@ -23,6 +23,10 @@
     }
 }*/
 
+.hover-btn {
+    @apply transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110  text-color-9 hover:text-color-8 md:text-n-8 md:hover:text-color-7 duration-300;
+}
+
 .rotate-45 {
     @apply rotate-[45deg];
 }
