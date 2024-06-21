@@ -4,7 +4,7 @@ const Section = ({ className, id, customPaddings, children }) => {
       id={id}
       className={`
         relative 
-        ${customPaddings || `py-10 px-5 md:px-8`} 
+        ${customPaddings || `px-0 py-0`} 
         ${className || ""}`}
     >
       {children}

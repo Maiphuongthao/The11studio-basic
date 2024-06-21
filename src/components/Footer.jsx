@@ -8,7 +8,7 @@ import AccessSvg from "../assets/AccessSvg";
 
 const Footer = () => {
   return (
-    <Section className="!px-0 !py-10 ">
+    <Section>
       <div className="px-5 md:px-8 py-15 containeur flex flex-col gap-3 bg-color-7 text-n-1 font-lexend font-extralight">
         <a className="flex-initial w-[3rem] md:w-[4rem] pb-8" href="#">
           <img src={logoMark} alt="logo footer" />

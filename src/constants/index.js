@@ -91,3 +91,7 @@ export const infos = {
   address: "1 Rés les coudrays, 78990 Élancourt",
   telephone: "06111111",
 };
+
+export const discounts = [
+  { id: "0", title: "-10% pour votre premier tatouage", category: "tatouage" },
+];

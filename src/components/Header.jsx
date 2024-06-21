@@ -1,4 +1,3 @@
-import { useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 import { disablePageScroll, enablePageScroll } from "scroll-lock";
@@ -10,7 +9,6 @@ import ChevronSvg from "../assets/ChevronSvg";
 import Button from "./Button";
 
 const Header = () => {
-  const pathname = useLocation();
   const [openNavigation, setOpenNavigation] = useState(false);
   const [color, setColor] = useState("#fff");
   const [openServices, setServices] = useState(false);
@@ -57,7 +55,7 @@ const Header = () => {
   return (
     <div
       className={`${
-        openNavigation ? "h-full bg-color-7 " : ""
+        openNavigation ? "h-full bg-color-7 " : "bg-n-1"
       } fixed w-full md:h-auto top-0 z-50 md:bg-n-1`}
     >
       <div
