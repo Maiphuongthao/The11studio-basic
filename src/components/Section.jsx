@@ -3,7 +3,7 @@ const Section = ({ className, id, customPaddings, children }) => {
     <div
       id={id}
       className={`
-        relative 
+        relative
         ${customPaddings || `px-0 py-0`} 
         ${className || ""}`}
     >

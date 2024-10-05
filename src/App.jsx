@@ -1,12 +1,20 @@
-import Header from "./components/Header";
-import Intro from "./components/Intro";
-import Footer from "./components/Footer";
+import {
+  NavBar,
+  Studio,
+  Services,
+  Blogs,
+  Footer,
+  Heading,
+} from "./components/index";
 
 const App = () => {
   return (
     <>
-      <Header />
-      <Intro />
+      <NavBar />
+      <Heading />
+      <Services />
+      <Studio />
+      <Blogs />
       <Footer />
     </>
   );

@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 import { fontFamily } from "tailwindcss/defaultTheme";
 import plugin from "tailwindcss/plugin";
 
@@ -7,44 +8,23 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
     "./public/assets/**/*.{js,ts,jsx,tsx}",
+    "./**/@material-tailwind/**/*.{html,js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
       colors: {
         color: {
-          1: "#000000",
-          2: "#EFEFEF",
-          3: "#D1D1D1",
-          4: "#D9D9D9",
-          5: "#838383",
-          6: "#4D4D4D",
-          7: "#FF4500",
-          8: "#FFBAA0",
-          9: "#F3E8D7",
-        },
-        stroke: {
-          1: "#26242C",
-        },
-        n: {
-          1: "#FFFFFF",
-          2: "#CAC6DD",
-          3: "#ADA8C3",
-          4: "#757185",
-          5: "#3F3A52",
-          6: "#252134",
-          7: "#15131D",
-          8: "#0E0C15",
-          9: "#474060",
-          10: "#43435C",
-          11: "#1B1B2E",
-          12: "#2E2A41",
-          13: "#6C7275",
+          1: "#BD3900",
+          2: "#d87e42",
+          3: "#F1ECE8",
+          4: "#f7ede2",
+          5: "#000",
         },
       },
 
       fontFamily: {
-        sans: ["var(--lexend)", ...fontFamily.sans],
-        lexend: "var(--font-lexend)",
+        sans: ["var(--robo)", ...fontFamily.sans],
+        robomono: "var(--font-robo)",
       },
 
       letterSpacing: {
@@ -74,11 +54,25 @@ export default {
       borderWidth: {
         DEFAULT: "0.0625rem",
       },
+      keyframes: {
+        marquee: {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(-100%)" },
+        },
+        marquee2: {
+          "0%": { transform: "translateX(100%)" },
+          "100%": { transform: "translateX(0%)" },
+        },
+      },
+      animation: {
+        marquee: "marquee 25s linear infinite",
+        marquee2: "marquee2 25s linear infinite",
+      },
       backgroundImage: {
         "radial-gradient": "radial-gradient(var(--tw-gradient-stops))",
         "conic-gradient":
           "conic-gradient(from 225deg, #FFC876, #79FFF7, #9F53FF, #FF98E2, #FFC876)",
-        "benefit-card-1": "url(assets/benefits/card-1.svg)",
+        "heading-card": "url(assets/photo_de_header.png)",
         "benefit-card-2": "url(assets/benefits/card-2.svg)",
         "benefit-card-3": "url(assets/benefits/card-3.svg)",
         "benefit-card-4": "url(assets/benefits/card-4.svg)",
@@ -92,8 +86,7 @@ export default {
       addBase({});
       addComponents({
         ".container": {
-          "@apply min-w-[77.5rem] mx-auto px-5 md:px-10 lg:px-15 xl:max-w-[87.5rem]":
-            {},
+          "@apply px-5 md:px-15": {},
         },
         ".h1": {
           "@apply font-semibold text-[2.5rem] leading-[3.25rem] md:text-[2.75rem] md:leading-[3.75rem] lg:text-[3.25rem] lg:leading-[4.0625rem] xl:text-[3.75rem] xl:leading-[4.5rem]":
@@ -130,10 +123,10 @@ export default {
             {},
         },
         ".quote": {
-          "@apply font-lexend text-lg leading-normal": {},
+          "@apply font-robomono text-lg leading-normal": {},
         },
         ".button": {
-          "@apply font-lexend text-xs font-bold uppercase tracking-wider": {},
+          "@apply font-robomono text-xs font-bold uppercase tracking-wider": {},
         },
       });
       addUtilities({
