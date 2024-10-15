@@ -1,5 +1,5 @@
 const Button = ({ className, href, onClick, children, px }) => {
-  const classes = `button p-4 bg-color-1 rounded-full font-light text-[1rem] relative infline-flex items-center text-white transition-colors justify-center ${
+  const classes = `button p-4 bg-color-1 rounded-full font-light text-[1rem] relative infline-flex items-center text-white transition-colors justify-center items-center hover:-translate-y-1 transition ease-in-out delay-150 duration-300 hover:transition-all ${
     px || px - 7
   } ${className || ""} `;
   const spanClasses = `relative`;

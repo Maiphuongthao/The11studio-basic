@@ -15,84 +15,29 @@
     scroll-behavior: smooth;
 }
 
-a:hover {
-    @apply text-color-2
-}
 
-input::placeholder {
+
+.swiper-button-next,
+.swiper-button-prev {
     @apply text-color-4;
-    opacity: 1
+    @apply bg-color-1;
+    @apply h-12 w-12 rounded-full mx-5;
 }
 
-input::-ms-input-placeholder {
-    /* Edge 12 -18 */
-    @apply text-color-4
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    font-size: 30px;
 }
 
-.hover-btn {
-    @apply hover:text-color-3
+.swiper-button-next.swiper-button-disabled,
+.swiper-button-prev.swiper-button-disabled {
+    display: hidden;
 }
 
-.rotate-45 {
-    @apply rotate-[45deg];
+.swiper-pagination-bullet-active {
+    @apply text-color-1 !important;
 }
 
-.rotate-90 {
-    @apply rotate-[90deg];
-}
-
-.rotate-135 {
-    @apply rotate-[135deg];
-}
-
-s .rotate-180 {
-    @apply rotate-[180deg];
-}
-
-.rotate-225 {
-    @apply rotate-[225deg];
-}
-
-.rotate-270 {
-    @apply rotate-[270deg];
-}
-
-.rotate-315 {
-    @apply rotate-[315deg];
-}
-
-.rotate-360 {
-    @apply rotate-[360deg];
-}
-
-.-rotate-45 {
-    @apply rotate-[-45deg];
-}
-
-.-rotate-90 {
-    @apply rotate-[-90deg];
-}
-
-.-rotate-135 {
-    @apply rotate-[-135deg];
-}
-
-.-rotate-180 {
-    @apply rotate-[-180deg];
-}
-
-.-rotate-225 {
-    @apply rotate-[-225deg];
-}
-
-.-rotate-270 {
-    @apply rotate-[-270deg];
-}
-
-.-rotate-315 {
-    @apply rotate-[-315deg];
-}
-
-.-rotate-360 {
-    @apply rotate-[-360deg];
+.swiper-pagination-bullet {
+    @apply bg-color-1;
 }

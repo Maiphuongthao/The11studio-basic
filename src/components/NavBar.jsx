@@ -8,13 +8,14 @@ import {
   Menu,
   MenuHandler,
   ListItem,
-  List,
 } from "@material-tailwind/react";
 import { ChevronDownIcon } from "@heroicons/react/16/solid";
 import "animate.css";
 
 import { favicon, faviconBlack } from "../assets";
 import { navigation, services } from "../constants";
+import { Link } from "react-router-dom";
+import classNames from "classnames";
 
 const NavListMenu = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -23,7 +24,7 @@ const NavListMenu = () => {
   const toggleOpen = () => setIsMobileMenuOpen((cur) => !cur);
 
   const renderItems = (
-    <div className="w-dvh justify-center lg:items-start items-center lg:bg-white hover:outline-none lg:rounded-lg flex flex-col lf:flex-row">
+    <div className="w-dvh justify-center lg:items-start items-center lg:bg-color-4 hover:outline-none lg:rounded-lg flex flex-col lf:flex-row">
       {services.map(({ url, title }, key) => (
         <a href={url} key={key} className="outline-none hover:outline-none">
           <MenuItem>
@@ -55,7 +56,7 @@ const NavListMenu = () => {
         >
           <Typography as="div" variant="small">
             <ListItem
-              className={`flex rounded-full text-color-1 hover:text-white uppercase`}
+              className={`flex rounded-full text-color-1 uppercase transition ease-in-out delay-150 duration-300 hover:transition-all hover:bg-color-4`}
               selected={isMenuOpen || isMobileMenuOpen}
               onClick={toggleOpen}
             >
@@ -84,7 +85,7 @@ const NavListMenu = () => {
         <MenuList
           className={`${
             icon ? "lg:block hidden " : `hidden`
-          } bg-inherit border-0 shadow-none text-color-5 `}
+          } bg-inherit border-0 shadow-none text-color-1`}
         >
           {renderItems}
         </MenuList>
@@ -98,24 +99,28 @@ const NavListMenu = () => {
 
 const NavListList = () => {
   return (
-    <div className="flex bg-color-3 w-full h-full text-color-1 bg-opacity-40 pt-5 text-[1,5rem] flex-col lg:flex-row font-semibold rounded-full lg:pt-0 lg:items-center">
+    <div
+      className={classNames(
+        "flex bg-color-2 bg-opacity-50 pt-5 text-[1,5rem]",
+        "flex-col lg:flex-row font-semibold rounded-full lg:pt-0 lg:items-center"
+      )}
+    >
       <div className="flex flex-col justify-center items-center w-full">
         <NavListMenu />
       </div>
-      <div className="flex flex-col lg:flex-row w-full justify-center items-center">
-        {navigation.map(({ url, title, icon }, key) => (
+      <div className="flex flex-col lg:flex-row justify-center items-center">
+        {navigation.map(({title, icon }, key) => (
           <ListItem
             key={key}
             className={`${
               icon ? "hidden" : ""
-            } rounded-full hover:text-color-5 uppercase justify-center lg:p-0`}
+            } rounded-full transition ease-in-out delay-150 duration-300 text-color-1 hover:transition-all md:hover:bg-color-4 hover:bg-inherit uppercase justify-center lg:p-0`}
           >
-            <a
-              href={url}
-              className="rounded-full p-3 h-fit w-fit hover-btn  outline-none hover:outline-none "
-            >
-              {title}
-            </a>
+            <div className="rounded-full p-3 outline-none hover:outline-none hover:bg-color-4 md:hover:bg-inherit">
+              <Link to={`services/${title}`}>
+                <div>{title}</div>
+              </Link>
+            </div>
           </ListItem>
         ))}
       </div>
@@ -136,13 +141,19 @@ const NavBar = () => {
     <div className={`relative`}>
       <div
         className={`fixed w-full z-10 ${
-          openNav ? "bg-color-2 py-8" : "top-8 "
+          openNav ? "bg-color-2 py-8" : "top-15"
         } `}
       >
-        <div className="flex w-fullitems-center px-15">
-          <a href="#" className={`flex flex-initial w-[6rem]`}>
-            <img alt="favicon" src={openNav ? faviconBlack : favicon} />
-          </a>
+        <div className="flex w-full items-center px-15">
+          <div className="items-center justify-center flex">
+            {" "}
+            <Link to="/">
+              <div className={`flex flex-initial w-[6rem]`}>
+                <img alt="favicon" src={openNav ? faviconBlack : favicon} />
+              </div>
+            </Link>
+          </div>
+
           <div className={`w-full items-center justify-end flex`}>
             <div className="hidden lg:block rounded-full ">
               <NavListList />

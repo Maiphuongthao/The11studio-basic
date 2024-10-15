@@ -1,8 +1,12 @@
+import { studioVideo } from "../assets";
+
 const Studio = () => {
   return (
-    <video className="h-full w-full" autoPlay loop muted>
-      <source src="" type="video/mp4" />
-    </video>
+    <div className="h-screen">
+      <video className=" h-full w-full object-cover" autoPlay loop muted>
+        <source src={studioVideo} type="video/mp4" />
+      </video>
+    </div>
   );
 };
 

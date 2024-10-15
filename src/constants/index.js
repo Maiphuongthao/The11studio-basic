@@ -44,7 +44,7 @@ export const services = [
   },
   {
     id: "1",
-    title: "maquillage permanent",
+    title: "maquillage semi-permanent",
     url: "#pmu",
     image: pmuServiceImg,
   },
@@ -182,6 +182,51 @@ export const actualities = [
   },
   {
     id: "5",
+    title: "MagicEffect brows",
+    photo: hairstro,
+    content:
+      "Est laoreet quis aliquam ultrices quam integer. Aliquet cursus nisi egestas eu pellentesque amet suspendisse. Tincidunt neque amet dignissim euismod pulvinar risus enim fermentum. Blandit mauris aliquet senectus tincidunt. Donec nisl condimentum praesent id.",
+    createdDate: "10/06/2024",
+    url: "#",
+  },
+  {
+    id: "6",
+    title: "MagicEffect brows",
+    photo: hairstro,
+    content:
+      "Est laoreet quis aliquam ultrices quam integer. Aliquet cursus nisi egestas eu pellentesque amet suspendisse. Tincidunt neque amet dignissim euismod pulvinar risus enim fermentum. Blandit mauris aliquet senectus tincidunt. Donec nisl condimentum praesent id.",
+    createdDate: "10/06/2024",
+    url: "#",
+  },
+  {
+    id: "7",
+    title: "MagicEffect brows",
+    photo: hairstro,
+    content:
+      "Est laoreet quis aliquam ultrices quam integer. Aliquet cursus nisi egestas eu pellentesque amet suspendisse. Tincidunt neque amet dignissim euismod pulvinar risus enim fermentum. Blandit mauris aliquet senectus tincidunt. Donec nisl condimentum praesent id.",
+    createdDate: "10/06/2024",
+    url: "#",
+  },
+  {
+    id: "8",
+    title: "MagicEffect brows",
+    photo: hairstro,
+    content:
+      "Est laoreet quis aliquam ultrices quam integer. Aliquet cursus nisi egestas eu pellentesque amet suspendisse. Tincidunt neque amet dignissim euismod pulvinar risus enim fermentum. Blandit mauris aliquet senectus tincidunt. Donec nisl condimentum praesent id.",
+    createdDate: "10/06/2024",
+    url: "#",
+  },
+  {
+    id: "9",
+    title: "MagicEffect brows",
+    photo: hairstro,
+    content:
+      "Est laoreet quis aliquam ultrices quam integer. Aliquet cursus nisi egestas eu pellentesque amet suspendisse. Tincidunt neque amet dignissim euismod pulvinar risus enim fermentum. Blandit mauris aliquet senectus tincidunt. Donec nisl condimentum praesent id.",
+    createdDate: "10/06/2024",
+    url: "#",
+  },
+  {
+    id: "10",
     title: "MagicEffect brows",
     photo: hairstro,
     content:

@@ -1,5 +1,3 @@
-import Section from "./Section";
-
 import { infos } from "../constants";
 
 import { secondaryLogo } from "../assets";
@@ -9,16 +7,16 @@ const Footer = () => {
   return (
     <div className="h-screen">
       <ContactForm />
-      <div className="md:p-8">
-        <div className="flex justify-between pt-3 md:pt-0 text-sm md:text-md text-color-1">
-          <div className="w-1/4 h-[40%]">
+      <div className=" flex justify-center flex-col items-center pt-3  md:pt-20 bg-color-4">
+        <div className="flex lg:w-[70%] px-10 sm:px-15 lg:px-0 justify-between items-center text-xs md:text-sm text-color-1">
+          <div className="w-1/4">
             <p>{infos.telephone}</p>
             <a href={`mailto:${infos.email}`} className="hover:text-color-2">
               {infos.email}
             </a>
             <p>{infos.address}</p>
           </div>
-          <div className="underline">
+          <div className="underline w-1/4">
             <h4>
               <a href="#">FAQS</a>
             </h4>
@@ -69,7 +67,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="my-10 flex justify-center">
+        <div className="mt-10">
           <img src={secondaryLogo} alt="The 11 Studio secondary Logo" />
         </div>
       </div>

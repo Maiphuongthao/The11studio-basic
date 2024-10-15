@@ -14,6 +14,7 @@ import trico from "./tricopigmentation.png";
 import tattooServiceImg from "./tattooservice.png";
 import pmuServiceImg from "./pmuServiceImg.png";
 import beautyServiceImg from "./beautyServicesImg.png";
+import studioVideo from "./studioVideo.mp4";
 
 export {
   redlogo,
@@ -32,4 +33,5 @@ export {
   tattooServiceImg,
   pmuServiceImg,
   beautyServiceImg,
+  studioVideo,
 };
